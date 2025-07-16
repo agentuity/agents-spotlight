@@ -1,0 +1,142 @@
+export const metadata = {
+  title: 'Changelog Management Agent',
+  description: 'An AI-powered tool that automatically updates changelogs across repositories using GitHub webhooks and Devin AI.',
+  imageURL: '/showroom-exhibit-image/agent-changelog.png',
+  date: '2025-01-16',
+  lastUpdatedDate: '2025-01-16',
+  authorData: {
+    showroomCardName: 'Agentuity team',
+    isCommunity: true,
+    exhibitAuthorName: 'Rick Blalock',
+    exhibitAuthorLink: 'https://github.com/rblalock',
+  },
+  links: {
+    repository: 'https://github.com/agentuity/agent-changelog',
+  },
+  tags: ['TypeScript', 'GitHub Webhooks', 'Changelog Management', 'Automation', 'Devin AI'],
+};
+
+# 📝 Changelog Management Agent
+
+An AI-powered tool that automatically updates changelogs across repositories using GitHub webhooks and Devin AI. This agent streamlines the process of maintaining accurate and up-to-date changelogs by automatically processing repository events and generating meaningful changelog entries.
+
+## ✨ Key Features
+
+- 🔄 **Automated Changelog Updates** - Automatically processes GitHub events to update changelogs
+- 🪝 **GitHub Webhook Integration** - Listens to repository events in real-time
+- 🤖 **AI-Powered Analysis** - Uses LLM to analyze commits and generate meaningful changelog entries
+- 📊 **Multi-Repository Support** - Manages changelogs across multiple repositories
+- 🔧 **Configurable Processing** - Customizable rules for different types of changes
+- 🚀 **Agentuity Native** - Built for seamless deployment on Agentuity platform
+
+## 🔄 How It Works
+
+The agent listens for GitHub webhook events, processes the changes using AI analysis, and automatically updates the appropriate changelog files with meaningful entries based on the nature of the changes.
+
+## 🚀 Quick Start with Agentuity
+
+### Prerequisites
+
+- **Bun**: Version 1.2.4 or higher
+- **Agentuity CLI**: Install from [agentuity.dev](https://agentuity.dev)
+
+### Authentication
+
+Before using Agentuity, you need to authenticate:
+
+```bash
+agentuity login
+```
+
+This command will open a browser window where you can log in to your Agentuity account.
+
+### Development Mode
+
+Run your project in development mode with:
+
+```bash
+agentuity dev
+```
+
+This will start your project and open a new browser window connecting your agent to the Agentuity Console in DevMode, allowing you to test and debug your agent in real-time.
+
+### Configuration
+
+Set up your environment variables:
+
+```bash
+agentuity env set GITHUB_TOKEN your_github_token
+agentuity env set GITHUB_WEBHOOK_SECRET your_webhook_secret
+agentuity env set DEVIN_API_KEY your_devin_api_key
+```
+
+## 🌐 Deployment
+
+When you're ready to deploy your agent to the Agentuity Cloud:
+
+```bash
+agentuity deploy
+```
+
+This command will bundle your agent and deploy it to the cloud, making it accessible via the Agentuity platform.
+
+### Webhook Setup
+
+After deployment, configure your GitHub repositories to send webhooks to your deployed agent endpoint for events like:
+- Push events
+- Pull request merges
+- Release events
+
+## 📚 Project Structure
+
+```
+├── agents/             # Agent definitions and implementations
+├── node_modules/       # Dependencies
+├── package.json        # Project dependencies and scripts
+├── .env.example        # Environment variable examples
+└── agentuity.yaml      # Agentuity project configuration
+```
+
+## 🔧 Configuration
+
+Your project configuration is stored in `agentuity.yaml`. This file defines your agents, development settings, and deployment configuration.
+
+The agent requires a `.env` file with the following variables:
+- `GITHUB_TOKEN` - GitHub personal access token for repository access
+- `GITHUB_WEBHOOK_SECRET` - Secret for validating webhook payloads
+- `DEVIN_API_KEY` - API key for Devin AI integration
+
+## 🛠️ Advanced Usage
+
+### Environment Variables
+
+You can set environment variables for your project:
+
+```bash
+agentuity env set KEY=VALUE
+```
+
+### Secrets Management
+
+For sensitive information, use secrets:
+
+```bash
+agentuity env set --secret KEY=VALUE
+```
+
+## 📖 Documentation
+
+For comprehensive documentation on the Agentuity JavaScript SDK, visit:
+[https://agentuity.dev/SDKs/javascript](https://agentuity.dev/SDKs/javascript)
+
+## 🆘 Troubleshooting
+
+If you encounter any issues:
+
+1. Check the [documentation](https://agentuity.dev/SDKs/javascript)
+2. Join our [Discord community](https://discord.gg/agentuity) for support
+3. Contact the Agentuity support team
+
+## 📝 License
+
+This project is licensed under the terms specified in the LICENSE file.

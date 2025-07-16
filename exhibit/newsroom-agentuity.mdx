@@ -1,0 +1,202 @@
+export const metadata = {
+  title: 'Newsroom: AI-Powered Content Pipeline',
+  description: 'An automated content generation system that collects, processes, and publishes AI-related news featuring various specialized AI agents.',
+  imageURL: '/showroom-exhibit-image/newsroom-agentuity.png',
+  date: '2025-01-16',
+  lastUpdatedDate: '2025-01-16',
+  authorData: {
+    showroomCardName: 'Agentuity team',
+    isCommunity: true,
+    exhibitAuthorName: 'Rick Blalock',
+    exhibitAuthorLink: 'https://github.com/rblalock',
+  },
+  links: {
+    repository: 'https://github.com/agentuity/newsroom-agentuity',
+  },
+  tags: ['TypeScript', 'News Processing', 'Content Pipeline', 'Multi-Agent System', 'Podcast Generation', 'AI News'],
+};
+
+# 📰 Newsroom: AI-Powered Content Pipeline
+
+An automated content generation system that collects, processes, and publishes AI-related news. This sophisticated pipeline features various specialized AI agents working together to create a comprehensive news processing and publishing system.
+
+## ✨ Key Features
+
+- 🤖 **Multi-Agent Architecture** - Specialized agents for different aspects of news processing
+- 📊 **Automated Content Pipeline** - End-to-end automation from collection to publication
+- 🎙️ **Podcast Generation** - AI-powered podcast creation with voice synthesis
+- 🔍 **Intelligent Filtering** - AI-driven content relevance and quality assessment
+- 📝 **Content Enhancement** - Automated editing and content improvement
+- 🌐 **Web Scraping** - Automated news collection from various sources
+- 🚀 **Agentuity Native** - Built for seamless deployment on Agentuity platform
+
+## 🏗️ Agent Architecture
+
+### Editor in Chief
+The orchestrator that oversees the entire content pipeline:
+- **Complete Workflow Orchestration** - Manages the entire news processing pipeline
+- **Automated News Pipeline Management** - Coordinates between different specialized agents
+- **Podcast Generation Coordination** - Oversees the creation of audio content
+- **Multiple Operation Modes** - Supports various workflows including full workflow (news + podcast), podcast-only workflow, and more
+- **Automated Publishing System** - Handles the final publication of processed content
+
+### Editor
+Handles content editing and refinement:
+- **Content Enhancement** - Retrieves additional content using Firecrawl and improves existing articles
+- **Metadata Extraction** - Extracts and processes images, metadata, and other relevant information
+- **Source-Specific Templates** - Applies appropriate formatting based on content source
+- **Content Structuring** - Creates engaging headlines, compelling summaries, and well-organized body content
+- **Content Enrichment** - Generates relevant tags, processes images, and adds contextual information
+
+### Filter
+Filters out duplicative and non-related content:
+- **AI-Powered Relevance Checking** - Uses AI to determine content relevance and quality
+- **Duplicate Content Detection** - Identifies and removes duplicate or similar content
+- **Confidence Scoring** - Provides confidence scores for article relevance
+- **Focused Content Areas** - Specializes in AI topics including LLMs, AI Agents, Industry News, Research Breakthroughs, and AI Ethics
+
+### Investigator
+Researches and verifies news content:
+- **Automated Web Scraping** - Uses Firecrawl API for comprehensive content collection
+- **AI and Agent-Focused Research** - Specializes in AI and agent-related news content
+- **Real-Time Trend Detection** - Identifies and analyzes emerging trends in AI
+- **Data Pipeline Integration** - Seamlessly integrates with the project's data processing pipeline
+
+### Podcast Editor
+Prepares content for podcast format:
+- **AI-Powered Script Generation** - Creates engaging podcast scripts from news content
+- **Dynamic Host Personality Creation** - Develops consistent and engaging host personas
+- **Smart Story Grouping** - Intelligently organizes content for optimal podcast flow
+- **Time-Optimized Content** - Creates content optimized for specific time formats (e.g., 4-minute episodes)
+- **Automated Transcript Generation** - Generates and manages podcast transcripts
+- **Date Range-Based Selection** - Selects content based on specified date ranges
+
+### Podcast Voice
+Generates audio content:
+- **High-Quality AI Voice Generation** - Creates professional-quality audio content
+- **Automatic Transcript Formatting** - Formats transcripts for optimal voice synthesis
+- **Cloud Storage Integration** - Integrates with Cloudflare R2 for audio storage
+- **Local Development Support** - Supports both local development and cloud deployment
+- **Optimized Audio Output** - Generates MP3 audio at 44.1kHz, 128kbps for optimal quality
+- **Automatic URL Management** - Handles audio file URLs and accessibility
+- **Date-Based Organization** - Organizes audio files by date for easy management
+
+## 🚀 Quick Start with Agentuity
+
+### Prerequisites
+
+- **Bun**: Version 1.2.4 or higher
+- **Agentuity CLI**: Install from [agentuity.dev](https://agentuity.dev)
+
+### Authentication
+
+Before using Agentuity, you need to authenticate:
+
+```bash
+agentuity login
+```
+
+This command will open a browser window where you can log in to your Agentuity account.
+
+### Development Mode
+
+Run your project in development mode with:
+
+```bash
+agentuity dev
+```
+
+This will start your project and open a new browser window connecting your agents to the Agentuity Console in DevMode, allowing you to test and debug your multi-agent system in real-time.
+
+### Configuration
+
+Set up your environment variables for various integrations:
+
+```bash
+agentuity env set FIRECRAWL_API_KEY your_firecrawl_key
+agentuity env set OPENAI_API_KEY your_openai_key
+agentuity env set CLOUDFLARE_R2_ACCESS_KEY your_r2_key
+agentuity env set CLOUDFLARE_R2_SECRET_KEY your_r2_secret
+```
+
+## 🌐 Deployment
+
+When you're ready to deploy your agent system to the Agentuity Cloud:
+
+```bash
+agentuity deploy
+```
+
+This command will bundle your agents and deploy them to the cloud, making them accessible via the Agentuity platform.
+
+## 📚 Project Structure
+
+```
+├── agents/             # Agent definitions and implementations
+│   ├── editor-in-chief/    # Editor in Chief Agent
+│   ├── editor/             # Editor Agent
+│   ├── filter/             # Filter Agent
+│   ├── investigator/       # Investigator Agent
+│   ├── podcast-editor/     # Podcast Editor Agent
+│   └── podcast-voice/      # Podcast Voice Agent
+├── shared/             # Shared utilities and types
+├── node_modules/       # Dependencies
+├── package.json        # Project dependencies and scripts
+├── .env.example        # Environment variable examples
+└── agentuity.yaml      # Agentuity project configuration
+```
+
+## 🔧 Configuration
+
+Your project configuration is stored in `agentuity.yaml`. This file defines your agents, development settings, and deployment configuration.
+
+## 🛠️ Advanced Usage
+
+### Environment Variables
+
+You can set environment variables for your project:
+
+```bash
+agentuity env set KEY=VALUE
+```
+
+### Secrets Management
+
+For sensitive information, use secrets:
+
+```bash
+agentuity env set --secret KEY=VALUE
+```
+
+### Workflow Customization
+
+The system supports various operational modes:
+- **Full Workflow** - Complete news processing and podcast generation
+- **News Only** - Focus on news collection and processing without podcast generation
+- **Podcast Only** - Generate podcasts from existing processed content
+- **Custom Workflows** - Tailored workflows for specific content requirements
+
+## 📖 Documentation
+
+For comprehensive documentation on the Agentuity JavaScript SDK, visit:
+[https://agentuity.dev/SDKs/javascript](https://agentuity.dev/SDKs/javascript)
+
+## 🤝 Contributing
+
+We welcome contributions! Please feel free to submit issues, feature requests, or pull requests to help improve the newsroom system.
+
+## 🆘 Troubleshooting
+
+If you encounter any issues:
+
+1. Check the [documentation](https://agentuity.dev/SDKs/javascript)
+2. Join our [Discord community](https://discord.gg/agentuity) for support
+3. Contact the Agentuity support team
+
+## ⚠️ Development Status
+
+**Note**: This repository is under heavy development and is not yet stable. Features and APIs may change significantly. Use with caution in production environments.
+
+## 📝 License
+
+This project is licensed under the terms specified in the LICENSE file.
