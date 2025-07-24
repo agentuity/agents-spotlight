@@ -1,86 +1,80 @@
-# 🚀 Agentuity Agents Showroom - Contribution Guide 🌟
+# 🚀 Agentuity Agents Spotlight - Contribution Guide 🌟
 
-Want to feature your agent in the [Agentuity Showroom](https://agentuity.com/showroom)? You're in the right place! 🤖
+Want to feature your agent in the [Agentuity Spotlight](https://agentuity.com/spotlight)? You're in the right place! 🤖
 
-Just create a pull request with your agent's `.mdx` file to get started.
+## Getting Started
 
-Since you're here, you're already part of the community! 🎉 **You're officially invited to join our [Discord](https://discord.gg/agentuity)** and follow us on [YouTube](https://www.youtube.com/@Agentuity), [X](https://x.com/agentuity), and [LinkedIn](https://www.linkedin.com/company/agentuity).
+We're excited to showcase your AI agents to our community! Follow this simple guide to add your agent to our spotlight.
 
-## How to Feature Your Agent
+### Creating Your Agent Spotlight
 
-### 1. Create Your Agent File
+Create a new file in the `agents-spotlight/featured/` directory named `[your-agent-name].mdx`
 
-Create a new file in the `agents-showroom/exhibit/` directory named `[your-agent-name].mdx`
-
-### 2. Add the Required Metadata
-
-Your agent file must start with the metadata export in this exact format:
-
-```typescript
+```markdown
 export const metadata = {
   title: 'Your Agent Name',
   description: 'Brief description of what your agent does',
-  imageURL: '/showroom-exhibit-image/image-name.png', // optional - can also add external like: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80' 
-  date: '2025-01-15', // Today's date
-  lastUpdatedDate: '2025-01-15', // Today's date
+  imageURL: '/spotlight-featured-image/image-name.png', // optional - can also add external like: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80'
+  date: '2025-01-15',
+  lastUpdatedDate: '2025-01-15',
   authorData: {
-    showroomCardName: 'Your Name',
+    spotlightCardName: 'Your Name',
     isCommunity: true,
-    exhibitAuthorName: 'Your Name', // optional
-    exhibitAuthorLink: 'https://github.com/yourusername', // optional
+    featuredAuthorName: 'Your Full Name', // optional
+    featuredAuthorLink: 'https://github.com/yourusername', // optional
   },
   links: {
-    repository: 'https://github.com/yourusername/your-agent',
-    blog: 'https://yourblog.com/post', // optional
-    video: 'https://youtube.com/watch?v=...', // optional
+    repository: 'https://github.com/yourusername/your-agent-repo',
+    blog: 'https://yourblog.com/agent-post', // optional
+    video: 'https://youtube.com/watch?v=demo', // optional
   },
-  tags: ['python', 'langchain', 'automation', 'productivity'], // Be specific!
+  tags: ['automation', 'productivity'], // optional
 };
+
+# Your Agent Name
+
+## What it does
+
+Brief overview of your agent's capabilities and purpose.
+
+## How to use it
+
+Step-by-step instructions on how to set up and use your agent.
+
+## Key features
+
+- Feature 1
+- Feature 2
+- Feature 3
+
+## Demo
+
+Include any demos, screenshots, or examples here.
 ```
 
-### 3. Write Your Agent Introduction (feel free to see the other examples here)
+### Contributing
 
-After the metadata, write a cool introduction to your agent using MDX. This should include:
+1. Fork the `agents-spotlight` repository
+2. Add your `[agent-name].mdx` file to the `featured/` directory
+3. Include a representative image in the `spotlight-featured-image/` directory (optional)
+4. Submit a pull request
 
-- What your agent does
-- How to use it
-- Key features
+Once your PR is approved, your agent will appear on [agentuity.com/spotlight](https://agentuity.com/spotlight) within **48 hours** automatically!
 
-### 4. Submit Your Pull Request
+## Important Notes
 
-1. Fork the `agents-showroom` repository
-2. Add your `[agent-name].mdx` file to the `exhibit/` directory
-3. Submit a pull request with your agent
+### File Naming
+- Use kebab-case for filenames: `my-awesome-agent.mdx`
+- No spaces or special characters in filenames
 
-### 5. Go Live
+### Images
+- **Image absolute path** For the `imageURL`, use an absolute path like `/spotlight-featured-image/your-image.png` or an external image URL (`https://...`)
+- Recommended image size: 600x400px
+- Supported formats: PNG, JPG, WebP
 
-Once your PR is approved, your agent will appear on [agentuity.com/showroom](https://agentuity.com/showroom) within **48 hours** automatically!
+### Metadata Requirements
+- `title`: Keep it concise and descriptive
+- `description`: 1-2 sentences explaining what the agent does
+- `links.repository`: Must be a public repository link
 
-## What Makes a Great Contribution
-
-### ✅ Do This
-
-- **Follow the metadata format** and fill it out completely (optional fields are optional 😉)
-- **Write a cool agent** or agent starting point/template
-- **Write a short, engaging introduction** that explains what your agent does
-- **Add relevant tags** (frameworks, tools, technologies, use cases, etc.)
-- **Use clean, professional images** without watermarks
-- **Image absolute path** For the `imageURL`, use an absolute path like `/showroom-exhibit-image/your-image.png` or an external image URL (`https://...`)
-- **Include working code examples** and clear instructions
-- **Link to your actual repository** with the agent code
-
-### ❌ Don't Do This
-
-- Add inappropriate content (links, images, or text)
-- Use watermarked or copyrighted images
-- Submit broken or incomplete agents
-- Skip the required metadata fields
-- Write overly long descriptions (keep it concise!)
-
-Ready to showcase your agent? Create that PR and join the showroom! 🚀
-
-## Come Say Hi! 👋
-
-The Agentuity team is available and accessible on our Discord. We'd love for you to say hi, ask questions, or even hop on our community calls.
-
-Join the conversation on **[Discord](https://discord.gg/agentuity)**!
+Ready to showcase your agent? Create that PR and join the spotlight! 🚀
