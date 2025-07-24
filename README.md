@@ -8,13 +8,12 @@ We're excited to showcase your AI agents to our community! Follow this simple gu
 
 ### Creating Your Agent Spotlight
 
-Create a new file in the `agents-spotlight/featured/` directory named `[your-agent-name].mdx`
+Create a new file in the `agents-spotlight/agents/` directory named `[your-agent-name].mdx`
 
 ```markdown
 export const metadata = {
   title: 'Your Agent Name',
   description: 'Brief description of what your agent does',
-  imageURL: '/spotlight-featured-image/image-name.png', // optional - can also add external like: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80'
   date: '2025-01-15',
   lastUpdatedDate: '2025-01-15',
   authorData: {
@@ -55,8 +54,8 @@ Include any demos, screenshots, or examples here.
 ### Contributing
 
 1. Fork the `agents-spotlight` repository
-2. Add your `[agent-name].mdx` file to the `featured/` directory
-3. Include a representative image in the `spotlight-featured-image/` directory (optional)
+2. Add your `[agent-name].mdx` file to the `agents/` directory
+3. Add an `[agent-name].[jpg|png|webp]` image in the same directory (optional, but recommended)
 4. Submit a pull request
 
 Once your PR is approved, your agent will appear on [agentuity.com/spotlight](https://agentuity.com/spotlight) within **48 hours** automatically!
@@ -68,9 +67,8 @@ Once your PR is approved, your agent will appear on [agentuity.com/spotlight](ht
 - No spaces or special characters in filenames
 
 ### Images
-- **Image absolute path** For the `imageURL`, use an absolute path like `/spotlight-featured-image/your-image.png` or an external image URL (`https://...`)
-- Recommended image size: 600x400px
-- Supported formats: PNG, JPG, WebP
+- Image size: 600x400px
+- Supported formats: JPG, PNG, WebP
 
 ### Metadata Requirements
 - `title`: Keep it concise and descriptive
