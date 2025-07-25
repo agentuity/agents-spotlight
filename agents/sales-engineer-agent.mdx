@@ -1,0 +1,222 @@
+export const metadata = {
+  title: 'Sales Engineer Agent System',
+  description: 'A comprehensive multi-agent system for automating Request for Proposal (RFP) completion through natural conversation and document processing.',
+  date: '2025-01-25',
+  lastUpdatedDate: '2025-01-25',
+  authorData: {
+    spotlightCardName: 'Agentuity',
+    isCommunity: true,
+  },
+  links: {
+    repository: 'https://github.com/agentuity/examples/tree/main/agents/agent-salesEngineer',
+  },
+  tags: ['JavaScript', 'Multi-Agent System', 'RFP Processing', 'Document Analysis', 'Sales Automation', 'Schema Extraction', 'CLI Interface', 'Conversational AI', 'Agentuity SDK'],
+};
+
+# 💼 Sales Engineer Agent System
+
+A sophisticated multi-agent system designed to streamline Request for Proposal (RFP) completion through intelligent conversation and automated document processing. This system demonstrates advanced agent coordination and document workflow automation.
+
+## ✨ Key Features
+
+- 🤖 **Multi-Agent Architecture** - Coordinated system with three specialized agents
+- 📄 **RFP Document Processing** - Automated schema extraction and analysis
+- 💬 **Conversational Interface** - Natural language interaction for RFP completion
+- 📊 **Dynamic Schema Extraction** - Adapts to various RFP document formats
+- 🔄 **State Management** - Maintains conversation context across sessions
+- 📝 **Automated Generation** - Creates completed RFP documents
+- 🖥️ **CLI Interface** - User-friendly command-line interaction tool
+- 🚀 **Agentuity Native** - Built for seamless deployment on Agentuity platform
+
+## 🏗️ Multi-Agent Architecture
+
+### 1. Sales Engineer Agent (Main)
+The primary orchestrator that manages the entire RFP workflow:
+- **Conversation Management** - Maintains dialogue state and context
+- **Agent Coordination** - Delegates tasks to specialized agents
+- **User Interaction** - Handles natural language communication
+- **Workflow Control** - Manages the end-to-end RFP completion process
+
+### 2. RFP Schema Agent
+Specialized in document analysis and structure extraction:
+- **Document Processing** - Analyzes uploaded RFP documents
+- **Schema Extraction** - Identifies required fields and structure
+- **Format Support** - Handles various document formats (PDF, etc.)
+- **Structure Analysis** - Creates JSON schema from document requirements
+
+### 3. RFP Generator Agent
+Focused on document creation and completion:
+- **Document Generation** - Creates completed RFP documents
+- **Template Processing** - Uses extracted schema for document structure
+- **Content Integration** - Incorporates conversation data into final document
+- **Format Output** - Generates markdown-formatted RFP responses
+
+## 🛠️ Technical Implementation
+
+### Core Technologies
+
+- **JavaScript/Node.js** - Primary development language
+- **Agentuity SDK** - Cloud-native agent platform integration
+- **Document Processing** - PDF and document analysis capabilities
+- **CLI Framework** - Interactive command-line interface
+
+### RFP Workflow
+
+1. **Document Upload** - User provides RFP document (base64 encoded)
+2. **Schema Extraction** - RFP Schema Agent analyzes document structure
+3. **Conversational Gathering** - Sales Engineer Agent collects required information
+4. **Information Processing** - System organizes and validates collected data
+5. **Document Generation** - RFP Generator Agent creates completed document
+6. **Final Delivery** - User receives completed RFP in markdown format
+
+## 🚀 Quick Start with Agentuity
+
+### Prerequisites
+
+- **Node.js**: Version 18 or higher
+- **Bun**: For package management and CLI execution
+- **Agentuity CLI**: Install from [agentuity.dev](https://agentuity.dev)
+
+### Authentication
+
+Before using Agentuity, you need to authenticate:
+
+```bash
+agentuity login
+```
+
+### Installation
+
+1. Install dependencies for the agents:
+```bash
+cd agent && bun install
+```
+
+2. Install dependencies for the CLI:
+```bash
+cd app && bun install
+```
+
+### Project Import
+
+Import the project into your Agentuity account:
+
+```bash
+agentuity project import
+```
+
+### Development Mode
+
+Start the agents in development mode:
+
+```bash
+cd agent && agentuity dev
+```
+
+Start the CLI interface:
+
+```bash
+cd app && bun run app
+```
+
+## 🌐 Deployment
+
+When you're ready to deploy your agents to the Agentuity Cloud:
+
+```bash
+cd agent && agentuity deploy
+```
+
+## 📚 Project Structure
+
+```
+├── agent/              # Agent implementations
+│   ├── agents/         # Individual agent definitions
+│   └── agentuity.yaml  # Agent configuration
+├── app/                # CLI interface application
+│   ├── src/            # CLI source code
+│   └── package.json    # CLI dependencies
+└── README.md           # Documentation
+```
+
+## 🔧 Usage Examples
+
+### Sales Engineer Agent Request
+
+```json
+{
+  "sessionId": "123e4567-e89b-12d3-a456-426614174000",
+  "userMessage": "I need help completing an RFP for cloud services",
+  "template": "base64EncodedPDFContent",
+  "templateContentType": "application/pdf"
+}
+```
+
+### Sales Engineer Agent Response
+
+```json
+{
+  "message": "I've analyzed your RFP document. Let me ask you some questions about your cloud requirements...",
+  "done": false,
+  "filledTemplate": null
+}
+```
+
+### Completion Response
+
+```json
+{
+  "message": "Great! I have all the information needed.",
+  "done": true,
+  "filledTemplate": "# Completed RFP Document\n\n## Executive Summary\n..."
+}
+```
+
+## 💼 RFP Capabilities
+
+- **Multi-Format Support** - PDF, Word, and other document formats
+- **Dynamic Schema Recognition** - Adapts to various RFP structures
+- **Conversational Data Collection** - Natural language information gathering
+- **Automated Completion** - Generates professional RFP responses
+- **Session Management** - Maintains context across multiple interactions
+
+## 🖥️ CLI Interface Features
+
+- **Interactive Conversation** - Real-time chat with the Sales Engineer Agent
+- **Document Upload** - Easy RFP document submission
+- **Progress Tracking** - Visual feedback on completion status
+- **Result Export** - Save completed RFP documents locally
+
+## 🔧 Configuration
+
+### Agent URL Setup
+
+For local development:
+- Use the URL provided by `agentuity dev`
+
+For deployed agents:
+1. Set Incoming IO to API mode
+2. Configure the `SALES_ENGINEER_URL` environment variable
+
+### Environment Variables
+
+```bash
+agentuity env set SALES_ENGINEER_URL your_agent_api_url
+```
+
+## 📖 Documentation
+
+For comprehensive documentation on the Agentuity JavaScript SDK, visit:
+[https://agentuity.dev/SDKs/javascript](https://agentuity.dev/SDKs/javascript)
+
+## 🆘 Troubleshooting
+
+If you encounter any issues:
+
+1. Check the [documentation](https://agentuity.dev/SDKs/javascript)
+2. Join our [Discord community](https://discord.gg/agentuity) for support
+3. Contact the Agentuity support team
+
+## 📝 License
+
+This project is licensed under the terms specified in the LICENSE file.

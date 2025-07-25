@@ -1,0 +1,197 @@
+export const metadata = {
+  title: 'CrewAI Social Media Agent',
+  description: 'A multi-agent CrewAI system that generates LinkedIn-ready social media content through coordinated researcher, writer, and editor agents.',
+  date: '2025-01-25',
+  lastUpdatedDate: '2025-01-25',
+  authorData: {
+    spotlightCardName: 'Agentuity',
+    isCommunity: true,
+  },
+  links: {
+    repository: 'https://github.com/agentuity/examples/tree/main/frameworks/crewai/socialagent',
+  },
+  tags: ['Python', 'CrewAI', 'Social Media', 'Content Generation', 'Multi-Agent System', 'LinkedIn', 'Web Search', 'Serper', 'OpenAI', 'Agentuity SDK'],
+};
+
+# 🧠 CrewAI Social Media Agent
+
+A sophisticated multi-agent system built with CrewAI that generates professional LinkedIn-ready social media content. This agent demonstrates advanced multi-agent coordination with specialized roles for research, writing, and editing.
+
+## ✨ Key Features
+
+- 🤖 **Multi-Agent Architecture** - Coordinated system with researcher, writer, and editor agents
+- 📝 **LinkedIn Content Generation** - Creates professional, engaging social media posts
+- 🔍 **Web Research Integration** - Uses Serper API for real-time content research
+- 📊 **Structured Workflow** - Organized CrewAI task delegation and execution
+- 🎯 **Topic-Focused Content** - Generates content based on user-defined topics
+- 📚 **Source Attribution** - Includes references and links to original sources
+- 🚀 **Agentuity Native** - Built for seamless deployment on Agentuity platform
+
+## 🏗️ Multi-Agent Architecture
+
+### Researcher Agent
+Specialized in gathering relevant information and insights:
+- **Web Search** - Uses Serper API to find relevant articles and sources
+- **Content Analysis** - Analyzes and summarizes key insights
+- **Source Validation** - Ensures credibility and relevance of sources
+- **Data Extraction** - Pulls key quotes and statistics
+
+### Writer Agent
+Focused on creating engaging social media content:
+- **Content Creation** - Generates LinkedIn-style posts with proper formatting
+- **Tone Optimization** - Maintains professional yet engaging voice
+- **Structure Design** - Creates well-organized posts with clear messaging
+- **Call-to-Action** - Includes appropriate engagement prompts
+
+### Editor Agent
+Ensures quality and polish of final content:
+- **Content Review** - Reviews and refines generated posts
+- **Quality Assurance** - Ensures professional standards and accuracy
+- **Format Optimization** - Optimizes for LinkedIn's platform requirements
+- **Final Polish** - Adds finishing touches and improvements
+
+## 🛠️ Technical Implementation
+
+### Core Technologies
+
+- **Python** - Primary development language
+- **CrewAI** - Multi-agent orchestration framework
+- **Serper API** - Web search and content discovery
+- **OpenAI** - AI-powered content generation and analysis
+- **Agentuity SDK** - Cloud-native agent platform integration
+
+### Content Generation Workflow
+
+1. **Topic Processing** - Analyzes user-provided topic for research direction
+2. **Research Phase** - Researcher agent gathers relevant articles and insights
+3. **Content Creation** - Writer agent generates initial LinkedIn posts
+4. **Editorial Review** - Editor agent refines and polishes content
+5. **Output Generation** - Delivers formatted posts with sources and references
+
+## 🚀 Quick Start with Agentuity
+
+### Prerequisites
+
+- **Python**: Version 3.10 or higher
+- **UV**: Version 0.5.25 or higher
+- **Agentuity CLI**: Install from [agentuity.dev](https://agentuity.dev)
+- **Serper Account**: Sign up at [serper.dev](https://serper.dev)
+
+### Authentication
+
+Before using Agentuity, you need to authenticate:
+
+```bash
+agentuity login
+```
+
+### Installation
+
+Create and activate virtual environment:
+
+```bash
+source .venv/bin/activate
+```
+
+Install required dependencies:
+
+```bash
+pip install crewai crewai-tools python-dotenv uv
+```
+
+### Configuration
+
+Set up your Serper API key:
+
+```bash
+agentuity env set --secret SERPER_API_KEY your_serper_api_key
+```
+
+### Development Mode
+
+Run your project in development mode with:
+
+```bash
+agentuity dev
+```
+
+This will start your project and open a new browser window connecting your agent to the Agentuity Console in DevMode.
+
+## 🌐 Deployment
+
+When you're ready to deploy your agent to the Agentuity Cloud:
+
+```bash
+agentuity deploy
+```
+
+## 📚 Project Structure
+
+```
+├── agents/             # Agent definitions and implementations
+├── outputs/            # Generated content files
+├── .venv/              # Virtual environment
+├── pyproject.toml      # Project dependencies and metadata
+├── server.py           # Server entry point
+└── agentuity.yaml      # Agentuity project configuration
+```
+
+## 🔧 Usage Examples
+
+### Topic-Based Content Generation
+
+```
+"How small teams out-execute large corporations"
+```
+
+### Generated Output
+
+The agent produces:
+- **LinkedIn Posts** - Multiple professionally formatted posts
+- **Article Summaries** - Key insights from researched sources
+- **Reference Links** - Citations to original articles
+- **Markdown Format** - Clean, organized output files
+
+### Sample Topics
+
+- Technology trends and innovations
+- Business strategy and leadership
+- Startup insights and entrepreneurship
+- Industry analysis and market trends
+- Professional development topics
+
+## 📊 Content Features
+
+- **Professional Formatting** - LinkedIn-optimized post structure
+- **Engaging Headlines** - Attention-grabbing opening statements
+- **Key Insights** - Distilled wisdom from multiple sources
+- **Source Attribution** - Proper citation and linking
+- **Call-to-Action** - Engagement-driving conclusions
+- **Hashtag Integration** - Relevant hashtags for discoverability
+
+## 🔍 Research Capabilities
+
+- **Real-time Search** - Current articles and trending topics
+- **Multi-source Analysis** - Comprehensive research across sources
+- **Credibility Assessment** - Focus on authoritative sources
+- **Trend Identification** - Spotting emerging patterns and insights
+- **Quote Extraction** - Key statements and statistics
+
+## 📖 Documentation
+
+For comprehensive documentation:
+- [Agentuity Python SDK](https://agentuity.dev/SDKs/python)
+- [CrewAI Documentation](https://docs.crewai.com)
+
+## 🆘 Troubleshooting
+
+If you encounter any issues:
+
+1. Check the [documentation](https://agentuity.dev/SDKs/python)
+2. Review [CrewAI documentation](https://docs.crewai.com)
+3. Join our [Discord community](https://discord.gg/agentuity) for support
+4. Contact the Agentuity support team
+
+## 📝 License
+
+This project is licensed under the terms specified in the LICENSE file.

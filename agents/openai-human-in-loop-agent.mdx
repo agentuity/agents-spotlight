@@ -1,0 +1,222 @@
+export const metadata = {
+  title: 'OpenAI Human-in-the-Loop Agent',
+  description: 'A weather agent demonstrating controlled AI execution with human approval workflows using OpenAI Agents framework and state persistence.',
+  date: '2025-01-25',
+  lastUpdatedDate: '2025-01-25',
+  authorData: {
+    spotlightCardName: 'Agentuity',
+    isCommunity: true,
+  },
+  links: {
+    repository: 'https://github.com/agentuity/examples/tree/main/frameworks/openai/from-oai-typescript',
+    blog: 'https://agentuity.com/blog/openai-agents-example',
+  },
+  tags: ['TypeScript', 'OpenAI Agents', 'Human-in-the-Loop', 'Approval Workflow', 'State Management', 'Weather API', 'Controlled Execution', 'KV Storage', 'Agentuity SDK'],
+};
+
+# 🌤️ OpenAI Human-in-the-Loop Agent
+
+A sophisticated weather agent that demonstrates controlled AI execution with human oversight for sensitive operations. This agent showcases advanced approval workflows and state persistence using the OpenAI Agents framework.
+
+## ✨ Key Features
+
+- 🛡️ **Approval Gates** - Pauses execution to request human approval for specific actions
+- 💾 **State Persistence** - Uses Agentuity KV store to maintain agent state across requests
+- ⚡ **Selective Control** - Some operations run automatically, others require approval
+- 🔄 **Resume Capability** - Continues exactly where it left off after approval
+- 🏗️ **Clean Architecture** - Robust error handling and state management
+- 🌐 **Weather Integration** - Real-time weather data retrieval
+- 🚀 **Agentuity Native** - Built for seamless deployment on Agentuity platform
+
+## 🛠️ Technical Implementation
+
+### Core Technologies
+
+- **TypeScript** - Primary development language with full type safety
+- **OpenAI Agents** - Multi-agent orchestration and tool calling
+- **Agentuity SDK** - Cloud-native agent platform integration
+- **KV Storage** - Persistent state management across HTTP requests
+- **Weather API** - Real-time weather data integration
+
+### Approval Workflow
+
+1. **Request Processing** - Analyzes incoming weather requests
+2. **Approval Logic** - Determines which operations require human approval
+3. **State Serialization** - Saves agent state during approval wait
+4. **Human Decision** - Waits for human approval or rejection
+5. **State Restoration** - Resumes from exact point after decision
+6. **Execution Completion** - Completes the requested weather operations
+
+## 🚀 Quick Start with Agentuity
+
+### Prerequisites
+
+- **Node.js**: Version 18 or higher
+- **Bun**: For package management (recommended)
+- **Agentuity CLI**: Install from [agentuity.dev](https://agentuity.dev)
+
+### Authentication
+
+Before using Agentuity, you need to authenticate:
+
+```bash
+agentuity login
+```
+
+### Installation
+
+Install dependencies using Bun:
+
+```bash
+bun install
+```
+
+### Development Mode
+
+Run your project in development mode with:
+
+```bash
+agentuity dev
+```
+
+This will start your project and open a new browser window connecting your agent to the Agentuity Console in DevMode.
+
+## 🌐 Deployment
+
+When you're ready to deploy your agent to the Agentuity Cloud:
+
+```bash
+agentuity deploy
+```
+
+## 📚 Project Structure
+
+```
+├── src/
+│   └── agents/
+│       └── human-in-the-loop/
+│           └── index.ts        # Human approval workflow
+├── package.json                # Dependencies and scripts
+├── tsconfig.json              # TypeScript configuration
+├── agentuity.yaml             # Agentuity project configuration
+└── README.md                  # Documentation
+```
+
+## 🔧 Usage Examples
+
+### Initial Weather Request
+
+```json
+{
+  "message": "What is the weather in Oakland and San Francisco?"
+}
+```
+
+### Approval Required Response
+
+```json
+{
+  "type": "approval_needed",
+  "message": "Agent execution paused - human approval required",
+  "stateId": "approval_1234567890_abc123",
+  "approvals": [
+    {
+      "id": "approval_1234567890_abc123_0",
+      "agentName": "Weather Data Agent",
+      "toolName": "get_weather",
+      "arguments": {"location": "San Francisco"},
+      "message": "Agent wants to use 'get_weather' with: {\"location\":\"San Francisco\"}"
+    }
+  ],
+  "instructions": "Respond with: {\"type\": \"approval\", \"stateId\": \"...\", \"decisions\": [{\"approved\": true/false}]}"
+}
+```
+
+### Approval Decision
+
+```json
+{
+  "type": "approval",
+  "stateId": "approval_1234567890_abc123",
+  "decisions": [
+    {"approved": true}
+  ]
+}
+```
+
+### Final Weather Result
+
+```json
+{
+  "type": "completion",
+  "message": "The weather in Oakland is sunny\nThe weather in San Francisco is sunny",
+  "finalOutput": "Complete weather report for both cities"
+}
+```
+
+## 🔐 Approval Logic
+
+### Automatic Operations
+- **Oakland Weather** - Runs automatically without approval
+- **Standard Queries** - Basic weather information requests
+- **Cached Data** - Previously approved location data
+
+### Approval Required
+- **San Francisco Weather** - Requires human approval (demo configuration)
+- **Sensitive Locations** - Configurable location-based restrictions
+- **External API Calls** - Optional approval for third-party services
+
+## 💾 State Management
+
+### State Persistence Features
+
+- **Serialization** - Uses OpenAI's `RunState.toString()` for proper serialization
+- **KV Store Integration** - Leverages Agentuity's persistent storage
+- **Async Workflows** - Supports pausing and resuming across HTTP requests
+- **Error Recovery** - Robust error handling for missing/expired states
+- **Clean Architecture** - Modular functions with single responsibilities
+
+### State Lifecycle
+
+1. **State Creation** - Agent state initialized on first request
+2. **State Saving** - Serialized and stored in KV when approval needed
+3. **State Retrieval** - Restored from KV when approval decision received
+4. **State Cleanup** - Removed after successful completion or timeout
+
+## 🌤️ Weather Capabilities
+
+- **Current Conditions** - Real-time weather data
+- **Multiple Locations** - Support for multiple city queries
+- **Detailed Reports** - Comprehensive weather information
+- **Error Handling** - Graceful handling of API failures
+- **Location Validation** - Verification of location requests
+
+## 🔄 Workflow Patterns
+
+The agent demonstrates several important patterns:
+
+- **Pause and Resume** - Stopping execution for human input
+- **State Serialization** - Maintaining context across requests
+- **Conditional Logic** - Different approval rules for different operations
+- **Error Recovery** - Handling missing or expired states
+- **Clean Separation** - Modular approval and execution logic
+
+## 📖 Documentation
+
+For comprehensive documentation:
+- [Agentuity JavaScript SDK](https://agentuity.dev/SDKs/javascript)
+- [KV Store Guide](https://agentuity.dev/SDKs/javascript/core-concepts#agent-context)
+- [OpenAI Agents Examples](https://github.com/openai/openai-agents-js/tree/main/examples)
+
+## 🆘 Troubleshooting
+
+If you encounter any issues:
+
+1. Check the [Agentuity Documentation](https://agentuity.dev)
+2. Review [OpenAI Agents Examples](https://github.com/openai/agents)
+3. Join our [Discord Community](https://discord.gg/agentuity)
+4. Contact Agentuity Support
+
+## 📝 License
+
+This project is licensed under the terms specified in the LICENSE file.

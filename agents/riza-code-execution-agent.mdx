@@ -1,0 +1,170 @@
+export const metadata = {
+  title: 'Riza Code Execution Agent',
+  description: 'An AI agent that demonstrates secure code execution using Riza.io for running LLM-generated code in multiple programming languages.',
+  date: '2025-01-25',
+  lastUpdatedDate: '2025-01-25',
+  authorData: {
+    spotlightCardName: 'Agentuity',
+    isCommunity: true,
+  },
+  links: {
+    repository: 'https://github.com/agentuity/examples/tree/main/agents/agent-riza',
+  },
+  tags: ['TypeScript', 'Code Execution', 'Riza.io', 'Anthropic', 'Claude', 'Multi-Language Support', 'Secure Execution', 'Tool Calling', 'Agentuity SDK'],
+};
+
+# ⚡ Riza Code Execution Agent
+
+A powerful AI agent that demonstrates secure code execution capabilities using Riza.io's sandboxed environment. This agent combines Claude's code generation with Riza's secure execution platform to run code safely in multiple programming languages.
+
+## ✨ Key Features
+
+- 🔒 **Secure Code Execution** - Safe code execution using Riza's sandboxed environment
+- 🌐 **Multi-Language Support** - Execute Python, JavaScript, Ruby, PHP, and TypeScript
+- 🤖 **LLM Integration** - Uses Claude with tool calling for intelligent code generation
+- ⚡ **Real-time Execution** - Immediate code execution and result feedback
+- 📊 **Output Handling** - Captures both stdout and stderr for comprehensive feedback
+- 🛡️ **Sandboxed Environment** - Isolated execution prevents security risks
+- 🚀 **Agentuity Native** - Built for seamless deployment on Agentuity platform
+
+## 🛠️ Technical Implementation
+
+### Core Technologies
+
+- **TypeScript** - Primary development language
+- **Anthropic SDK** - Claude integration with tool calling
+- **Riza.io API** - Secure code execution platform
+- **Agentuity SDK** - Cloud-native agent platform integration
+
+### Execution Workflow
+
+1. **Prompt Processing** - Analyzes user requests for code generation needs
+2. **Code Generation** - Uses Claude to generate appropriate code solutions
+3. **Tool Calling** - Invokes Riza execution tool when code needs to be run
+4. **Secure Execution** - Runs code in Riza's isolated sandbox environment
+5. **Result Processing** - Returns execution results including output and errors
+
+## 🚀 Quick Start with Agentuity
+
+### Prerequisites
+
+- **Node.js**: Version 18 or higher
+- **Agentuity CLI**: Install from [agentuity.dev](https://agentuity.dev)
+- **Riza Account**: Sign up at [riza.io](https://riza.io)
+
+### Authentication
+
+Before using Agentuity, you need to authenticate:
+
+```bash
+agentuity login
+```
+
+### Configuration
+
+Set up your Riza API key:
+
+```bash
+agentuity env set --secret RIZA_API_KEY your_riza_api_key
+```
+
+### Development Mode
+
+Run your project in development mode with:
+
+```bash
+agentuity dev
+```
+
+This will start your project and open a new browser window connecting your agent to the Agentuity Console in DevMode.
+
+## 🌐 Deployment
+
+When you're ready to deploy your agent to the Agentuity Cloud:
+
+```bash
+agentuity deploy
+```
+
+## 📚 Project Structure
+
+```
+├── agents/             # Agent definitions and implementations
+├── node_modules/       # Dependencies
+├── package.json        # Project dependencies and scripts
+├── .env.example        # Environment variable examples
+└── agentuity.yaml      # Agentuity project configuration
+```
+
+## 🔧 Usage Examples
+
+### Python Code Execution
+
+```
+"Calculate the fibonacci sequence for the first 10 numbers and print them"
+```
+
+### JavaScript Data Processing
+
+```
+"Create a function that processes an array of numbers and returns the average, then test it with sample data"
+```
+
+### Multi-Language Comparison
+
+```
+"Show me how to implement a simple sorting algorithm in both Python and JavaScript"
+```
+
+## 💻 Supported Languages
+
+- **Python** - Full Python 3.x support with standard libraries
+- **JavaScript** - Modern JavaScript with Node.js runtime
+- **TypeScript** - TypeScript compilation and execution
+- **Ruby** - Ruby scripting and application development
+- **PHP** - PHP web development and scripting
+
+## 🔒 Security Features
+
+- **Sandboxed Execution** - Code runs in isolated containers
+- **Resource Limits** - Controlled CPU and memory usage
+- **Network Isolation** - Restricted network access for security
+- **Time Limits** - Execution timeouts prevent infinite loops
+- **Safe Environment** - No access to host system or sensitive data
+
+## 🛠️ Tool Configuration
+
+The agent configures Claude with a code execution tool that supports:
+
+- **Language Detection** - Automatically identifies programming language
+- **Code Validation** - Checks code syntax before execution
+- **Error Handling** - Comprehensive error reporting and debugging
+- **Output Capture** - Captures all execution output and errors
+
+## 📊 Execution Results
+
+Each code execution returns:
+
+- **Standard Output** - Program output and print statements
+- **Standard Error** - Error messages and warnings
+- **Execution Status** - Success or failure indication
+- **Runtime Information** - Execution time and resource usage
+
+## 📖 Documentation
+
+For comprehensive documentation:
+- [Agentuity JavaScript SDK](https://agentuity.dev/SDKs/javascript)
+- [Riza.io Documentation](https://docs.riza.io)
+
+## 🆘 Troubleshooting
+
+If you encounter any issues:
+
+1. Check the [documentation](https://agentuity.dev/SDKs/javascript)
+2. Review [Riza.io documentation](https://docs.riza.io)
+3. Join our [Discord community](https://discord.gg/agentuity) for support
+4. Contact the Agentuity support team
+
+## 📝 License
+
+This project is licensed under the terms specified in the LICENSE file.

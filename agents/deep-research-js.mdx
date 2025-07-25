@@ -1,0 +1,149 @@
+export const metadata = {
+  title: 'Deep Research Agent',
+  description: 'An AI-powered research agent that performs comprehensive web research, analyzes multiple sources, and generates detailed reports with citations.',
+  date: '2025-01-25',
+  lastUpdatedDate: '2025-01-25',
+  authorData: {
+    spotlightCardName: 'Agentuity',
+    isCommunity: true,
+  },
+  links: {
+    repository: 'https://github.com/agentuity/examples/tree/main/agents/deep-research-js',
+    blog: 'https://agentuity.com/blog/community-contributions-deep-research',
+  },
+  tags: ['JavaScript', 'Research', 'Web Scraping', 'Tavily', 'OpenAI', 'Multi-Source Analysis', 'Report Generation', 'Citations', 'Agentuity SDK'],
+};
+
+# 🔍 Deep Research Agent
+
+A sophisticated AI-powered research agent that conducts comprehensive web research by analyzing multiple sources and generating detailed, well-cited reports. This agent demonstrates advanced research capabilities using modern web scraping and AI analysis techniques.
+
+## ✨ Key Features
+
+- 🌐 **Multi-Source Research** - Searches and analyzes content from multiple web sources
+- 📊 **Comprehensive Analysis** - Processes and synthesizes information from various perspectives
+- 📝 **Detailed Reports** - Generates structured reports with proper citations and references
+- 🔗 **Source Verification** - Validates and cross-references information across sources
+- 🎯 **Topic-Focused** - Maintains focus on specific research topics and questions
+- 📚 **Citation Management** - Properly formats and includes source citations
+- 🚀 **Agentuity Native** - Built for seamless deployment on Agentuity platform
+
+## 🛠️ Technical Implementation
+
+### Core Technologies
+
+- **JavaScript/Node.js** - Primary development language
+- **Tavily API** - Advanced web search and content extraction
+- **OpenAI** - AI-powered analysis and report generation
+- **Agentuity SDK** - Cloud-native agent platform integration
+
+### Research Workflow
+
+1. **Query Processing** - Analyzes research questions and identifies key topics
+2. **Multi-Source Search** - Uses Tavily to find relevant sources across the web
+3. **Content Analysis** - Processes and evaluates source credibility and relevance
+4. **Information Synthesis** - Combines insights from multiple sources
+5. **Report Generation** - Creates structured reports with proper citations
+
+## 🚀 Quick Start with Agentuity
+
+### Prerequisites
+
+- **Node.js**: Version 18 or higher
+- **Agentuity CLI**: Install from [agentuity.dev](https://agentuity.dev)
+
+### Authentication
+
+Before using Agentuity, you need to authenticate:
+
+```bash
+agentuity login
+```
+
+### Development Mode
+
+Run your project in development mode with:
+
+```bash
+agentuity dev
+```
+
+This will start your project and open a new browser window connecting your agent to the Agentuity Console in DevMode.
+
+### Configuration
+
+Set up your environment variables for research services:
+
+```bash
+agentuity env set --secret TAVILY_API_KEY your_tavily_api_key
+agentuity env set --secret OPENAI_API_KEY your_openai_api_key
+```
+
+## 🌐 Deployment
+
+When you're ready to deploy your agent to the Agentuity Cloud:
+
+```bash
+agentuity deploy
+```
+
+## 📚 Project Structure
+
+```
+├── agents/             # Agent definitions and implementations
+├── src/                # Source code and utilities
+├── node_modules/       # Dependencies
+├── package.json        # Project dependencies and scripts
+└── agentuity.yaml      # Agentuity project configuration
+```
+
+## 🔧 Usage Examples
+
+### Basic Research Query
+
+Send a research request to the agent:
+
+```json
+{
+  "topic": "Impact of artificial intelligence on modern education",
+  "depth": "comprehensive",
+  "sources": 10
+}
+```
+
+### Advanced Research Parameters
+
+```json
+{
+  "topic": "Renewable energy adoption trends in developing countries",
+  "depth": "detailed",
+  "sources": 15,
+  "timeframe": "2020-2024",
+  "focus_areas": ["policy", "economics", "technology"]
+}
+```
+
+## 📊 Research Capabilities
+
+- **Academic Research** - Scholarly articles and peer-reviewed sources
+- **Industry Analysis** - Market reports and industry publications
+- **News Analysis** - Current events and trending topics
+- **Technical Research** - Documentation and technical specifications
+- **Comparative Studies** - Multi-perspective analysis and comparisons
+
+## 📖 Documentation
+
+For comprehensive documentation on the Agentuity JavaScript SDK, visit:
+[https://agentuity.dev/SDKs/javascript](https://agentuity.dev/SDKs/javascript)
+
+## 🆘 Troubleshooting
+
+If you encounter any issues:
+
+1. Check the [documentation](https://agentuity.dev/SDKs/javascript)
+2. Join our [Discord community](https://discord.gg/agentuity) for support
+3. Contact the Agentuity support team
+
+## 📝 License
+
+This project is licensed under the terms specified in the LICENSE file.

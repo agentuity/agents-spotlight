@@ -1,0 +1,1 @@
+This agent showcases Claude Code SDK integration for advanced coding capabilities. Use the Anthropic Claude logo or branding elements. The image could also show a coding interface with code analysis, generation, and execution features - displaying code editors, terminal outputs, and AI-powered code suggestions in a modern development environment with Anthropic's brand colors.

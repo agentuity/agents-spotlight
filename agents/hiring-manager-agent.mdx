@@ -1,0 +1,195 @@
+export const metadata = {
+  title: 'Hiring Manager Agent',
+  description: 'An AI-powered interview system that evaluates other AI agents through dynamic conversations and comprehensive assessment workflows.',
+  date: '2025-01-25',
+  lastUpdatedDate: '2025-01-25',
+  authorData: {
+    spotlightCardName: 'Agentuity',
+    isCommunity: true,
+  },
+  links: {
+    repository: 'https://github.com/agentuity/examples/tree/main/agents/hiring-manager-js',
+    blog: 'https://agentuity.com/blog/community-contributions-hiring-manager',
+  },
+  tags: ['JavaScript', 'Agent-to-Agent Communication', 'Interview System', 'Multi-Agent System', 'Evaluation Framework', 'State Management', 'Authentication', 'Agentuity SDK'],
+};
+
+# 🤝 Hiring Manager Agent
+
+An innovative AI-powered interview system that demonstrates agent-to-agent communication by evaluating other AI agents through dynamic conversations. This sophisticated system showcases advanced multi-agent architectures and evaluation frameworks.
+
+## ✨ Key Features
+
+- 🤖 **Agent-to-Agent Communication** - Direct communication between AI agents
+- 📋 **Dynamic Interview Process** - Adaptive questioning based on responses
+- 🎯 **Comprehensive Evaluation** - Multi-criteria assessment framework
+- 🔐 **Secure Authentication** - Registered applicant system with unique keys
+- 💾 **State Persistence** - Maintains conversation history and context
+- 📊 **Detailed Reporting** - Generates comprehensive evaluation reports
+- 🔄 **Resume Capability** - Continues interviews from where they left off
+- 🛡️ **Admin Controls** - Registration and management capabilities
+
+## 🛠️ Technical Implementation
+
+### Core Technologies
+
+- **JavaScript** - Primary development language
+- **Agentuity SDK** - Cloud-native agent platform integration
+- **KV Storage** - Persistent state management and authentication
+- **Multi-Agent Architecture** - Coordinated agent communication patterns
+
+### Interview Workflow
+
+1. **Applicant Registration** - Secure registration with unique authentication keys
+2. **Interview Initiation** - Dynamic conversation startup with context setting
+3. **Strategic Questioning** - Adaptive questions testing various capabilities
+4. **Response Evaluation** - Real-time assessment of agent responses
+5. **Comprehensive Scoring** - Multi-dimensional evaluation across 6 criteria
+6. **Report Generation** - Detailed evaluation reports with recommendations
+
+## 🚀 Quick Start with Agentuity
+
+### Prerequisites
+
+- **Node.js**: Version 18 or higher
+- **Agentuity CLI**: Install from [agentuity.dev](https://agentuity.dev)
+
+### Authentication
+
+Before using Agentuity, you need to authenticate:
+
+```bash
+agentuity login
+```
+
+### Development Mode
+
+Run your project in development mode with:
+
+```bash
+agentuity dev
+```
+
+This will start your project and open a new browser window connecting your agent to the Agentuity Console in DevMode.
+
+## 🌐 Deployment
+
+When you're ready to deploy your agent to the Agentuity Cloud:
+
+```bash
+agentuity deploy
+```
+
+## 📚 Project Structure
+
+```
+├── agents/             # Agent definitions and implementations
+├── interview-logs/     # Generated interview logs (dev mode)
+├── node_modules/       # Dependencies
+├── package.json        # Project dependencies and scripts
+└── agentuity.yaml      # Agentuity project configuration
+```
+
+## 🔧 Usage Examples
+
+### Hiring Manager Responses
+
+```json
+{
+  "type": "hiring-manager",
+  "hiringMessage": "Welcome to the interview! Let's start with a technical question...",
+  "done": false
+}
+```
+
+### Applicant Requests
+
+```json
+{
+  "type": "applicant",
+  "applicantName": "TestAgent",
+  "applicantKey": "unique_auth_key",
+  "applicantMessage": "I'm ready to answer your questions",
+  "fromId": "agent_123",
+  "fromWebhook": "https://agent-webhook-url.com"
+}
+```
+
+### Admin Registration
+
+```json
+{
+  "type": "admin",
+  "applicantName": "NewAgent",
+  "applicantKey": "new_agent_key",
+  "adminKey": "admin_secret_key",
+  "action": "register"
+}
+```
+
+## 📊 Evaluation Framework
+
+### Assessment Criteria (1-5 Scale)
+
+- **Technical Knowledge** - Understanding of domain-specific concepts
+- **Problem Solving** - Ability to analyze and solve complex problems
+- **Communication** - Clarity and effectiveness of responses
+- **Authenticity** - Genuine responses vs. fabricated information
+- **Memory** - Consistency and context retention across conversation
+- **Adaptability** - Flexibility in handling unexpected questions
+
+### Scoring System
+
+- **5: Excellent** - Strong, context-aware, convincing responses
+- **4: Good** - Mostly strong with minor issues
+- **3: Adequate** - Functional but lacks depth
+- **2: Poor** - Shows confusion or inconsistency
+- **1: Fail** - Clear fabrication or evasion
+
+## 🔐 Security & Management
+
+### Authentication System
+
+- **Unique Keys** - Each applicant gets a secure authentication key
+- **Registration Control** - Admin-managed applicant registration
+- **Session Security** - Secure conversation state management
+
+### Admin Features
+
+- **Applicant Registration** - Add new agents to the evaluation system
+- **Applicant Management** - Remove or update agent credentials
+- **System Monitoring** - Track interview progress and results
+
+## 🤖 Example Applicant Agent
+
+The system includes an example applicant agent that demonstrates:
+
+- **Interview Participation** - Proper communication protocols
+- **Response Handling** - Processing hiring manager questions
+- **State Management** - Maintaining conversation context
+- **Authentication** - Secure key-based communication
+
+## 📋 Interview Process
+
+1. **Maximum 10 Messages** - Controlled interview length
+2. **Strategic Questions** - Tests various agent capabilities
+3. **Dynamic Flow** - Adapts based on previous responses
+4. **Early Termination** - Can end when sufficient data is gathered
+5. **Comprehensive Evaluation** - Final assessment across all criteria
+
+## 📖 Documentation
+
+For comprehensive documentation on the Agentuity JavaScript SDK, visit:
+[https://agentuity.dev/SDKs/javascript](https://agentuity.dev/SDKs/javascript)
+
+## 🆘 Troubleshooting
+
+If you encounter any issues:
+
+1. Check the [documentation](https://agentuity.dev/SDKs/javascript)
+2. Join our [Discord community](https://discord.gg/agentuity) for support
+3. Contact the Agentuity support team
+
+## 📝 License
+
+This project is licensed under the terms specified in the LICENSE file.

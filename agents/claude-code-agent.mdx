@@ -1,0 +1,167 @@
+export const metadata = {
+  title: 'Claude Code Agent',
+  description: 'An AI agent that demonstrates Claude Code SDK integration for advanced code analysis, generation, and execution capabilities.',
+  date: '2025-01-25',
+  lastUpdatedDate: '2025-01-25',
+  authorData: {
+    spotlightCardName: 'Agentuity',
+    isCommunity: true,
+  },
+  links: {
+    repository: 'https://github.com/agentuity/examples/tree/main/agents/agent_claudeCode',
+  },
+  tags: ['TypeScript', 'Claude Code SDK', 'Anthropic', 'Code Generation', 'Code Analysis', 'Code Execution', 'Session Management', 'Agentuity SDK'],
+};
+
+# 💻 Claude Code Agent
+
+An intelligent coding agent that showcases the integration of Anthropic's Claude Code SDK with Agentuity's platform. This agent demonstrates advanced code analysis, generation, and execution capabilities with conversational session management.
+
+## ✨ Key Features
+
+- 🤖 **Claude Code SDK Integration** - Leverages Anthropic's powerful code capabilities
+- 💬 **Conversational Interface** - Maintains context across coding sessions
+- 📝 **Code Analysis** - Reads and analyzes existing codebases
+- ⚡ **Code Generation** - Creates new code based on requirements
+- 🔧 **Code Execution** - Runs and tests code in real-time
+- 💾 **Session Memory** - Remembers conversation history using Agentuity KV store
+- 🚀 **Zero Setup** - Uses Agentuity's AI Gateway for seamless API access
+
+## 🛠️ Technical Implementation
+
+### Core Technologies
+
+- **TypeScript** - Primary development language
+- **Claude Code SDK** - Advanced code capabilities from Anthropic
+- **Agentuity SDK** - Cloud-native agent platform integration
+- **Agentuity AI Gateway** - Managed API access without manual key setup
+
+### Code Workflow
+
+1. **Session Management** - Tracks conversation history by session ID
+2. **Code Analysis** - Analyzes provided Python files and codebase structure
+3. **Conversational Processing** - Maintains context for multi-turn interactions
+4. **Code Operations** - Performs read, write, and execute operations as needed
+5. **Response Generation** - Provides detailed explanations and code solutions
+
+## 🚀 Quick Start with Agentuity
+
+### Prerequisites
+
+- **Node.js**: Version 18 or higher
+- **Agentuity CLI**: Install from [agentuity.dev](https://agentuity.dev)
+
+### Authentication
+
+Before using Agentuity, you need to authenticate:
+
+```bash
+agentuity login
+```
+
+### Installation
+
+Install the Claude Code SDK:
+
+```bash
+npm install @anthropic-ai/claude-code-sdk
+```
+
+### Development Mode
+
+Run your project in development mode with:
+
+```bash
+agentuity dev
+```
+
+This will start your project and open a new browser window connecting your agent to the Agentuity Console in DevMode.
+
+## 🌐 Deployment
+
+When you're ready to deploy your agent to the Agentuity Cloud:
+
+```bash
+agentuity deploy
+```
+
+## 📚 Project Structure
+
+```
+├── agents/             # Agent definitions and implementations
+├── claude-references/  # Sample Python files for testing
+├── node_modules/       # Dependencies
+├── package.json        # Project dependencies and scripts
+└── agentuity.yaml      # Agentuity project configuration
+```
+
+## 🔧 Usage Examples
+
+### Start a Coding Session
+
+```json
+{
+  "session": "coding_session_123",
+  "prompt": "Analyze the Python files in the claude-references folder and explain their structure"
+}
+```
+
+### Code Generation Request
+
+```json
+{
+  "session": "coding_session_123",
+  "prompt": "Create a new function that processes the data from the existing modules"
+}
+```
+
+### Code Execution Request
+
+```json
+{
+  "session": "coding_session_123",
+  "prompt": "Run the main.py file and show me the output"
+}
+```
+
+## 💡 Code Capabilities
+
+- **Code Reading** - Analyze existing codebases and understand structure
+- **Code Writing** - Generate new code based on specifications
+- **Code Execution** - Run and test code with real-time feedback
+- **Debugging** - Identify and fix issues in existing code
+- **Refactoring** - Improve code quality and structure
+- **Documentation** - Generate code documentation and explanations
+
+## 🔄 Session Management
+
+The agent uses Agentuity's KV store to maintain conversation history:
+
+- **Session Persistence** - Conversations are remembered across requests
+- **Context Awareness** - Maintains understanding of previous interactions
+- **Multi-Session Support** - Handle multiple concurrent coding sessions
+- **History Retrieval** - Access previous conversation context
+
+## 🌟 AI Gateway Benefits
+
+- **Zero Configuration** - No need to manage API keys manually
+- **Automatic Scaling** - Built-in rate limiting and scaling
+- **Cost Optimization** - Efficient API usage management
+- **Security** - Secure API access without exposing credentials
+
+## 📖 Documentation
+
+For comprehensive documentation on the Agentuity JavaScript SDK, visit:
+[https://agentuity.dev/SDKs/javascript](https://agentuity.dev/SDKs/javascript)
+
+## 🆘 Troubleshooting
+
+If you encounter any issues:
+
+1. Check the [documentation](https://agentuity.dev/SDKs/javascript)
+2. Join our [Discord community](https://discord.gg/agentuity) for support
+3. Contact the Agentuity support team
+
+## 📝 License
+
+This project is licensed under the terms specified in the LICENSE file.
