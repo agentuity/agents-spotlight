@@ -1,7 +1,7 @@
 # 🚀 Agentuity Agents Spotlight - Contribution Guide 🌟
 
 <div align="center">
-  <img src="./readme-images/agents-spotlight.png" alt="Agentuity Spotlight" style="max-width: 440px; margin: 1.5rem auto; display: block;" />
+  <img src="./.github/agents-spotlight.png" alt="Agentuity Spotlight" style="max-width: 440px; margin: 1.5rem auto; display: block;" />
 </div>
 
 **Want to feature your agent in the [Agentuity Spotlight](https://agentuity.com/spotlight)? You're in the right place! 🤖**
