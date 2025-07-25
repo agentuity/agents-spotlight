@@ -63,16 +63,29 @@ Once your PR is approved, your agent will appear on [agentuity.com/spotlight](ht
 ## Important Notes
 
 ### File Naming
+
 - Use kebab-case for filenames: `my-awesome-agent.mdx`
 - No spaces or special characters in filenames
 
-### Images
-- Image size: 600x400px
-- Supported formats: JPG, PNG, WebP
-
 ### Metadata Requirements
+
 - `title`: Keep it concise and descriptive
 - `description`: 1-2 sentences explaining what the agent does
 - `links.repository`: Must be a public repository link
+
+### Images
+
+- Image size: 600x400px
+- Supported formats: JPG, PNG, WebP
+
+#### Displaying a logo (showcasing a specific tool or services)
+
+- Reference this template  
+<img src="./image-templates/spotlight-logo-template.png" alt="Spotlight logo template" width="320" />
+
+#### Displaying a relevant cover image (showcasing a cool usecase for agent or just something cool)
+
+- Recommended style: retro pixel‑art / ASCII‑art illustration with scattered single‑pixel “noise” in the background (like little floating squares), Feel: minimal, high‑contrast.  
+<img src="./agents/agent-changelog.png" alt="Relevant cover image example" width="320" />
 
 Ready to showcase your agent? Create that PR and join the spotlight! 🚀
