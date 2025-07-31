@@ -1,0 +1,17 @@
+name: Notify website-cf on agents-spotlight update
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger website-cf update
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.WEBSITE_CF_TOKEN }}" \
+            https://api.github.com/repos/agentuity/website-cf/dispatches \
+            -d '{"event_type":"agents_spotlight_updated"}'
