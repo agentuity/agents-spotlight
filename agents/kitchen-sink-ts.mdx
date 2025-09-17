@@ -1,0 +1,122 @@
+export const metadata = {
+  title: 'Agentuity Kitchen Sink (TypeScript)',
+  description: 'An interactive SDK showcase where you can test drive every Agentuity feature through live, working agents',
+  date: '2025-09-17',
+  lastUpdatedDate: '2025-09-17',
+  authorData: {
+    spotlightCardName: 'Agentuity',
+    isCommunity: true,
+    featuredAuthorName: 'Agentuity Team',
+    featuredAuthorLink: 'https://github.com/agentuity',
+  },
+  links: {
+    repository: 'https://github.com/agentuity/kitchen-sink-ts/',
+    blog: 'https://agentuity.com/blog/the-agentuity-kitchen-sink',
+  },
+  tags: ['TypeScript', 'AI Agents', 'Agentuity SDK', 'Interactive Learning', 'Reference Implementation'],
+};
+
+# Agentuity Kitchen Sink (TypeScript)
+
+An interactive playground and reference implementation that showcases every Agentuity SDK feature through live, working agents. Test drive the complete TypeScript SDK in minutes — no docs required!
+
+## What it does
+
+- **Interactive Learning**: Send messages to agents and see features in action with real code
+- **Hands-on Testing**: Try SDK capabilities before building your own agents
+- **Reference Implementation**: Copy and adapt working examples for your projects
+- **Living Documentation**: Agents explain their features as they demonstrate them
+
+**Zero to running in minutes** — minimal setup to start exploring the full Agentuity platform.
+
+## 🚀 Quick Start
+
+1. **Deploy** using the "*Deploy w/ Agentuity*" button to copy the project to your GitHub repository
+2. **Test locally** with `agentuity dev` and follow the terminal link to launch DevMode
+3. **Explore agents** — select any agent and start chatting to see features in action
+4. **Follow along** — keep the source code open in `src/agents/[agent-name]` while testing
+
+### Prerequisites
+
+**Required:**
+- Bun (v1.2.4+)
+- Agentuity CLI: `npm install -g @agentuity/cli`
+- Agentuity account at [agentuity.com](https://app.agentuity.com/sign-up)
+
+**Optional (for specific demos):**
+- `OPENAI_API_KEY`, `COMPOSIO_API_KEY`, `DISCORD_WEBHOOK_URL`, `SLACK_*` tokens, Twilio setup
+
+*Most agents work without additional setup.*
+
+## 🤖 Available Agents
+
+Each agent demonstrates specific Agentuity features:
+
+| Agent | What It Demonstrates |
+|:------|:---------------------|
+| **kitchen-sink** | Ask questions about any Agentuity feature |
+| **handler-request** | Access request data, content types, and triggers |
+| **handler-response** | Different response formats (text, images, streams, etc.) |
+| **handler-context** | Session data and agent context access |
+| **frameworks-provider** | Run multiple AI frameworks side-by-side |
+| **gateway-provider** | AI Gateway with multiple LLM providers |
+| **gateway-byo-token** | Using your own LLM provider API keys |
+| **io-agent** | Agent-to-agent communication & handoffs |
+| **io-api** | Synchronous API request handling |
+| **io-cron** | Scheduled execution with cron triggers |
+| **io-email** | Receive and respond to emails |
+| **io-sms** | SMS messaging via Twilio |
+| **io-webhook** | Asynchronous webhook processing (fire-and-forget) |
+| **storage-key-value** | Fast KV storage for session state & caching |
+| **storage-object-store** | Store files, images, and large objects |
+| **storage-vector** | Semantic search with vector embeddings |
+| **observability-logging** | Structured logging at different levels |
+| **observability-tracing** | OpenTelemetry tracing with spans and events |
+| **example-chat** | Conversational AI with persistent chat history |
+| **example-composio** | Integration with Composio tools (Hacker News) |
+| **example-discord** | Discord webhook notifications |
+| **example-slack** | Slack bot integration with thread support |
+
+## 🎯 What You'll Learn
+
+The Kitchen Sink covers the complete Agentuity platform:
+
+- **Handlers**: Request, response, and context management
+- **AI Gateway**: Multiple LLM providers and bring-your-own-tokens
+- **All IO Types**: Agent communication, APIs, cron, email, SMS, webhooks
+- **Storage**: Key-value, object store, and vector search
+- **Observability**: Structured logging and OpenTelemetry tracing
+- **Frameworks**: Multiple AI SDKs side-by-side
+- **Real Examples**: Slack bots, Discord notifications, Composio integrations
+
+Each agent is a focused, runnable example you can try out, copy, and adapt.
+
+## 📚 Project Structure
+
+```text
+kitchen-sink-ts/
+├── src/
+│   ├── agents/        # 20+ example agents demonstrating features
+│   └── lib/           # Shared utilities and helpers
+├── node_modules/      # Dependencies
+├── package.json       # Project dependencies and scripts
+├── agentuity.yaml     # Agentuity project configuration
+└── .env               # Local environment variables
+```
+
+## ⚙️ Configuration
+
+Your project configuration is stored in `agentuity.yaml`. This file defines your agents, development settings, and deployment configuration.
+
+## 🛠️ Customization
+
+1. **Add new agents** in `src/agents/`
+2. **Modify existing agents** to test different configurations
+3. **Deploy changes** with `agentuity deploy`
+
+## 📖 Resources
+
+- **Documentation**: [agentuity.dev](https://agentuity.dev)
+- **TypeScript SDK Reference**: [TypeScript SDK](https://agentuity.dev/SDKs/javascript)
+- **Python SDK Reference**: [Python SDK](https://agentuity.dev/SDKs/python)
+- **Discord Community**: [Join our Discord](https://discord.gg/agentuity)
