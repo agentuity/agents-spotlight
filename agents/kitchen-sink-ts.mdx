@@ -48,45 +48,16 @@ An interactive playground and reference implementation that showcases every Agen
 
 *Most agents work without additional setup.*
 
-## 🤖 Available Agents
-
-Each agent demonstrates specific Agentuity features:
-
-| Agent | What It Demonstrates |
-|-------|----------------------|
-| **kitchen-sink** | Ask questions about any Agentuity feature |
-| **handler-request** | Access request data, content types, and triggers |
-| **handler-response** | Different response formats (text, images, streams, etc.) |
-| **handler-context** | Session data and agent context access |
-| **frameworks-provider** | Run multiple AI frameworks side-by-side |
-| **gateway-provider** | AI Gateway with multiple LLM providers |
-| **gateway-byo-token** | Using your own LLM provider API keys |
-| **io-agent** | Agent-to-agent communication & handoffs |
-| **io-api** | Synchronous API request handling |
-| **io-cron** | Scheduled execution with cron triggers |
-| **io-email** | Receive and respond to emails |
-| **io-sms** | SMS messaging via Twilio |
-| **io-webhook** | Asynchronous webhook processing (fire-and-forget) |
-| **storage-key-value** | Fast KV storage for session state & caching |
-| **storage-object-store** | Store files, images, and large objects |
-| **storage-vector** | Semantic search with vector embeddings |
-| **observability-logging** | Structured logging at different levels |
-| **observability-tracing** | OpenTelemetry tracing with spans and events |
-| **example-chat** | Conversational AI with persistent chat history |
-| **example-composio** | Integration with Composio tools (Hacker News) |
-| **example-discord** | Discord webhook notifications |
-| **example-slack** | Slack bot integration with thread support |
-
 ## 🎯 What You'll Learn
 
-The Kitchen Sink covers the complete Agentuity platform:
+Explore **20+ agents** demonstrating the complete Agentuity platform:
 
 - **Handlers**: Request, response, and context management
 - **AI Gateway**: Multiple LLM providers and bring-your-own-tokens
 - **All IO Types**: Agent communication, APIs, cron, email, SMS, webhooks
-- **Storage**: Key-value, object store, and vector search
+- **Storage**: Key-value, object, and vector storage
 - **Observability**: Structured logging and OpenTelemetry tracing
-- **Frameworks**: Multiple AI SDKs side-by-side
+- **Frameworks**: Multiple AI frameworks side-by-side
 - **Real Examples**: Slack bots, Discord notifications, Composio integrations
 
 Each agent is a focused, runnable example you can try out, copy, and adapt.
@@ -96,7 +67,7 @@ Each agent is a focused, runnable example you can try out, copy, and adapt.
 ```text
 kitchen-sink-ts/
 ├── src/
-│   ├── agents/        # 20+ example agents demonstrating features
+│   ├── agents/        # 20+ reference agents
 │   └── lib/           # Shared utilities and helpers
 ├── node_modules/      # Dependencies
 ├── package.json       # Project dependencies and scripts
@@ -111,7 +82,7 @@ Your project configuration is stored in `agentuity.yaml`. This file defines your
 ## 🛠️ Customization
 
 1. **Add new agents** in `src/agents/`
-2. **Modify existing agents** to test different configurations
+2. **Modify existing agents** to test different configurations, or add your own agents
 3. **Deploy changes** with `agentuity deploy`
 
 ## 📖 Resources
